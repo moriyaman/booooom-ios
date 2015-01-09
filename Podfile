@@ -4,13 +4,16 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'booooom' do
-
   pod 'SVProgressHUD'
   pod "AFNetworking", "~> 2.0"
+  pod "AFNetworkActivityLogger", "~> 2.0"
   pod 'Facebook-iOS-SDK'
 end
 
 target 'booooomTests' do
-
+  pod 'SVProgressHUD'
+  pod "AFNetworking", "~> 2.0"
+  pod "AFNetworkActivityLogger", "~> 2.0"
+  pod 'Facebook-iOS-SDK'
 end
 
