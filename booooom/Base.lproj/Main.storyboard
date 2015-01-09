@@ -27,6 +27,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="IG2-iE-u2W" kind="modal" identifier="toHome" id="BrD-rM-Oc6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8J-In-vkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yhL-RK-mtW">
-                                <rect key="frame" x="0.0" y="-8" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -79,7 +82,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xU-zw-RCs">
-                                            <rect key="frame" x="0.0" y="-1" width="375" height="241.5"/>
+                                            <rect key="frame" x="0.0" y="-1" width="375" height="242"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
