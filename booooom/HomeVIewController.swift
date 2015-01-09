@@ -49,6 +49,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
+        
+        performSegueWithIdentifier("ItemDitail",sender: nil)
+        
         // error
     }
     
