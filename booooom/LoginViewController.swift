@@ -7,17 +7,22 @@
 //
 
 import Uikit
+import Foundation
 
 class LoginViewController: UIViewController, FBLoginViewDelegate {
     
-    @IBOutlet var fbLoginView : FBLoginView!
+    
+    @IBOutlet var fbLoginView: FBLoginView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.fbLoginView.delegate = self
-        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+    
+        //var fbLoginView : FBLoginView = self.view.viewWithTag(1) as FBLoginView;
+        //println(fbLoginView)
+        fbLoginView.delegate = self
+        fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
     }
     
     // Facebook Delegate Methods
@@ -27,11 +32,17 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
-        println("User: \(user)")
-        println("User ID: \(user.objectID)")
-        println("User Name: \(user.name)")
-        var userEmail = user.objectForKey("email") as String
-        println("User Email: \(userEmail)")
+        // login function
+        SVProgressHUD.show()
+        SVProgressHUD.showWithStatus("Now Login...")
+        
+        let delay = 3.0 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            SVProgressHUD.showSuccessWithStatus("Success")
+            self.performSegueWithIdentifier("afterLogin",sender: nil)
+        })
+    
     }
     
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {

@@ -20,7 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
         
         FBLoginView.self
-        FBProfilePictureView.self
+        
+        //ロギング開始
+        AFNetworkActivityLogger.sharedLogger().level = .AFLoggerLevelDebug
+        AFNetworkActivityLogger.sharedLogger().startLogging()
         
         return true
     }
