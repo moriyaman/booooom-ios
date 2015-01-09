@@ -17,7 +17,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var cameraBtn: UIButton!
     var picker:UIImagePickerController!=UIImagePickerController()
     var popover:UIPopoverController!=nil
-    let mySections: NSArray = ["", "Name", "Introduce", "Category", ""]
+    let mySections: NSArray = ["", "Introduce", "Category", "", ""]
     
     @IBOutlet var tableView: UITableView!
     
@@ -26,6 +26,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         picker.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorColor = UIColor.clearColor()
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,13 +56,13 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
             cellName = "Text Field Cell"
             break
         case 2:
-            cellName = "Text Field Cell"
-            break
-        case 3:
             cellName = "Select Cell"
             break
-        case 4:
+        case 3:
             cellName = "Finish Cell"
+            break
+        case 4:
+            cellName = "Space Cell"
             break
         default:
             cellName = ""
@@ -72,6 +73,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch indexPath.section {
         case 0:
+            cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 10000)
             let cameraBtn = cell.viewWithTag(1) as UIButton
             let cameraImage = cell.viewWithTag(2) as UIImageView
             cameraBtn.addTarget(self, action: "cameraBtnClicked:", forControlEvents:.TouchUpInside)
@@ -81,8 +83,8 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 2:
             break
         case 3:
-            break
-        case 4:
+            let registerBtn = cell.viewWithTag(10) as UIButton
+            registerBtn.addTarget(self, action: "registerBtnClicked:", forControlEvents:.TouchUpInside)
             break
         default:
             break
@@ -102,16 +104,16 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
             cellNum = 1
             break
         case 1:
-            cellNum = 3
+            cellNum = 2
             break
         case 2:
-            cellNum = 3
+            cellNum = 1
             break
         case 3:
-            cellNum = 3
+            cellNum = 1
             break
         case 4:
-            cellNum = 1
+            cellNum = 2
             break
         default:
             cellNum = 0
@@ -174,7 +176,37 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
-        println("picker cancel.")
+        self.dismissViewControllerAnimated(true, completion:nil)
+    }
+    
+    func registerBtnClicked(sender: AnyObject) {
+        
+        var alert:UIAlertController = UIAlertController(title: "Confirm", message: "Are you ready?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        //Cancel 一つだけしか指定できない
+        let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel",
+            style: UIAlertActionStyle.Cancel,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                println("Cancel")
+        })
+        
+        //Default 複数指定可
+        let okAction:UIAlertAction = UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                println("registered")
+                // register function
+        })
+        
+        //AlertもActionSheetも同じ
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+        
+        
     }
     
     @IBAction func closeBtnClicked(sender: AnyObject) {
@@ -187,7 +219,6 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
             handler:{
                 (action:UIAlertAction!) -> Void in
                 println("Cancel")
-                self.openCamera()
         })
         
         //Default 複数指定可
