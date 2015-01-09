@@ -6,4 +6,8 @@
 //  Copyright (c) 2015年 yuki.moriyama. All rights reserved.
 //
 
-import Foundation
+import Uikit
+
+class HomeViewController: UIViewController {
+    
+}
