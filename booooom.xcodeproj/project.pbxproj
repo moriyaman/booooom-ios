@@ -19,6 +19,7 @@
 		02F5AF5F1A5ED6240056DF01 /* HomeVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F5AF5E1A5ED6240056DF01 /* HomeVIewController.swift */; };
 		02F5AF621A5F67590056DF01 /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F5AF611A5F67590056DF01 /* Login.png */; };
 		02F5AF641A5F67610056DF01 /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F5AF631A5F67610056DF01 /* Start.png */; };
+		02F5AF661A5F6EB50056DF01 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F5AF651A5F6EB50056DF01 /* home.png */; };
 		92DB1E2FB63C44DB05648ECD /* libPods-booooom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7607886D7E1413ABF1B7924 /* libPods-booooom.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		02F5AF601A5F62D00056DF01 /* booooom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "booooom-Bridging-Header.h"; sourceTree = "<group>"; };
 		02F5AF611A5F67590056DF01 /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
 		02F5AF631A5F67610056DF01 /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start.png; sourceTree = "<group>"; };
+		02F5AF651A5F6EB50056DF01 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		152664B539FA1C3651802E85 /* Pods-booooom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booooom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-booooom/Pods-booooom.debug.xcconfig"; sourceTree = "<group>"; };
 		6D67C734DB8B4001DCE5C353 /* Pods-booooom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booooom.release.xcconfig"; path = "Pods/Target Support Files/Pods-booooom/Pods-booooom.release.xcconfig"; sourceTree = "<group>"; };
 		D7607886D7E1413ABF1B7924 /* libPods-booooom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-booooom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 		02ABDD2A1A5EBEA9009742A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				02F5AF651A5F6EB50056DF01 /* home.png */,
 				02F5AF631A5F67610056DF01 /* Start.png */,
 				02F5AF611A5F67590056DF01 /* Login.png */,
 				02ABDD2B1A5EBEA9009742A8 /* Info.plist */,
@@ -240,6 +243,7 @@
 			files = (
 				02ABDD351A5EBEA9009742A8 /* Main.storyboard in Resources */,
 				02F5AF621A5F67590056DF01 /* Login.png in Resources */,
+				02F5AF661A5F6EB50056DF01 /* home.png in Resources */,
 				02ABDD3A1A5EBEA9009742A8 /* LaunchScreen.xib in Resources */,
 				02ABDD371A5EBEA9009742A8 /* Images.xcassets in Resources */,
 				02F5AF641A5F67610056DF01 /* Start.png in Resources */,
