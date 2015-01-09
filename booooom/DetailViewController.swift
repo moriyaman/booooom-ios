@@ -20,6 +20,20 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // table delegate
         tableView.delegate = self
         tableView.dataSource = self
+
+        // navigation main title settings
+        var nav = self.navigationController?.navigationBar
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 20))
+        let image = UIImage(named: "BoooM_logo")
+        imageView.contentMode = .ScaleAspectFit
+        imageView.image = image
+        navigationItem.titleView = imageView
+        
+        // navigation
+        //let leftBackBtn = UIBarButtonItem(barButtonSystemItem: .Back, target: self, action: "barButtonItemClicked:")
+        //leftBackBtn.tintColor = UIColor(red:0.773,green:0.525,blue:0.820,alpha:1.0)
+        
+        //navigationItem.setLeftBarButtonItem(leftBackBtn, animated: true)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
@@ -56,10 +70,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellName, forIndexPath: indexPath) as UITableViewCell
         
         // only cell
-        if(cellName == "Cell"){
-            let itemImageView = cell.contentView.viewWithTag(4) as UIImageView
+        if(cellName == "First Cell"){
+            let itemImageView = cell.contentView.viewWithTag(7) as UIImageView
             
             itemImageView.image = UIImage(named: "sample.jpg")
+            itemImageView.clipsToBounds = true
         }
         
         //userNameLabel.text = userNames[indexPath.row]

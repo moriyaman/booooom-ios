@@ -59,6 +59,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // only cell
         let itemImageView = cell.contentView.viewWithTag(7) as UIImageView
         itemImageView.image = UIImage(named: "sample.jpg")
+        itemImageView.clipsToBounds = true
         
         //userNameLabel.text = userNames[indexPath.row]
         return cell
