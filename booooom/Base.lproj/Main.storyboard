@@ -353,13 +353,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registration Form" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxc-ud-zN2">
                                         <rect key="frame" x="119" y="14" width="137" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.71764705882352942" green="0.42745098039215684" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zq-pU-x8b">
                                         <rect key="frame" x="8" y="10" width="30" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="☓">
+                                        <state key="normal" title="x">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -367,37 +367,45 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="1" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-lW-cos">
-                                <rect key="frame" x="0.0" y="47" width="600" height="620"/>
+                                <rect key="frame" x="0.0" y="47" width="375" height="620"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="Photo Cell" rowHeight="157" id="JFQ-W8-byc">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="Photo Cell" rowHeight="250" id="JFQ-W8-byc">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JFQ-W8-byc" id="X2t-aR-ATf">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uns-xI-BrZ">
-                                                    <rect key="frame" x="142" y="27" width="114" height="104"/>
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uns-xI-BrZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
                                                     <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="104" id="pPM-oq-XQm"/>
+                                                        <constraint firstAttribute="height" constant="250" id="Wr5-8b-Lag"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3S-GM-cvn">
-                                                    <rect key="frame" x="172" y="64" width="54" height="30"/>
-                                                    <state key="normal" title="Camera">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3S-GM-cvn">
+                                                    <rect key="frame" x="137" y="52" width="100" height="145.5"/>
+                                                    <state key="normal" image="Camera_button">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="Uns-xI-BrZ" firstAttribute="top" secondItem="X2t-aR-ATf" secondAttribute="topMargin" constant="18" id="LZ5-f9-qes"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Uns-xI-BrZ" secondAttribute="bottom" constant="19" id="V7E-4G-dji"/>
+                                                <constraint firstAttribute="trailing" secondItem="p3S-GM-cvn" secondAttribute="trailing" constant="137.5" id="0kl-Hz-WZR"/>
+                                                <constraint firstItem="Uns-xI-BrZ" firstAttribute="leading" secondItem="X2t-aR-ATf" secondAttribute="leading" id="3ZI-UB-QWE"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uns-xI-BrZ" secondAttribute="trailing" id="73k-Yw-UZU"/>
+                                                <constraint firstItem="Uns-xI-BrZ" firstAttribute="top" secondItem="X2t-aR-ATf" secondAttribute="top" id="BRO-Y7-xOB"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uns-xI-BrZ" secondAttribute="bottom" id="E2R-th-sva"/>
+                                                <constraint firstAttribute="centerY" secondItem="p3S-GM-cvn" secondAttribute="centerY" id="HGu-sH-vCD"/>
+                                                <constraint firstItem="p3S-GM-cvn" firstAttribute="top" secondItem="X2t-aR-ATf" secondAttribute="top" constant="52.5" id="Q9Y-Eb-vGv"/>
+                                                <constraint firstAttribute="bottom" secondItem="p3S-GM-cvn" secondAttribute="bottom" constant="52" id="RXU-he-sL0"/>
+                                                <constraint firstAttribute="centerX" secondItem="p3S-GM-cvn" secondAttribute="centerX" id="ZJY-eZ-8MR"/>
+                                                <constraint firstItem="p3S-GM-cvn" firstAttribute="leading" secondItem="X2t-aR-ATf" secondAttribute="leading" constant="137.5" id="leq-NS-40i"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -430,15 +438,22 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U3c-5U-z7y" id="wge-2Q-8K8">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEw-Ij-6qV">
-                                                    <rect key="frame" x="0.0" y="6" width="375" height="30"/>
-                                                    <color key="backgroundColor" red="0.35294118520000001" green="0.74509805439999999" blue="0.61568629740000003" alpha="1" colorSpace="deviceRGB"/>
-                                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Register">
+                                                <button opaque="NO" tag="10" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEw-Ij-6qV">
+                                                    <rect key="frame" x="17" y="0.0" width="341" height="44"/>
+                                                    <color key="backgroundColor" red="0.97647058823529409" green="1" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="kb0-ei-q0c"/>
+                                                        <constraint firstAttribute="width" constant="340" id="vlb-R6-YnW"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.71764705882352942" green="0.42745098039215684" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="BoooM!!!">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="bEw-Ij-6qV" secondAttribute="centerX" id="8ck-ta-mOd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -466,11 +481,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930.5" y="447"/>
+            <point key="canvasLocation" x="930.5" y="446.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="BoooM_button" width="105" height="30"/>
+        <image name="Camera_button" width="100" height="75"/>
         <image name="Upload_button" width="84" height="72"/>
         <image name="diy-sample.jpg" width="968" height="1296"/>
         <image name="home.png" width="750" height="1334"/>
