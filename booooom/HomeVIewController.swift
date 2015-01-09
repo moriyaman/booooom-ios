@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 yuki.moriyama. All rights reserved.
 //
 
-import Uikit
+import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
