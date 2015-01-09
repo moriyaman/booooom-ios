@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
+    var scrollBeginingPoint: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        scrollBeginingPoint = scrollView.contentOffset;
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        var currentPoint = scrollView.contentOffset;
+        if(scrollBeginingPoint.y < currentPoint.y){
+            println("下へスクロール")
+        }else{
+            println("上へスクロール")
+        }
     }
 
 }
