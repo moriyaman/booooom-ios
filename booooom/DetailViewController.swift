@@ -28,12 +28,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         imageView.contentMode = .ScaleAspectFit
         imageView.image = image
         navigationItem.titleView = imageView
-        
-        // navigation
-        //let leftBackBtn = UIBarButtonItem(barButtonSystemItem: .Back, target: self, action: "barButtonItemClicked:")
-        //leftBackBtn.tintColor = UIColor(red:0.773,green:0.525,blue:0.820,alpha:1.0)
-        
-        //navigationItem.setLeftBarButtonItem(leftBackBtn, animated: true)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
