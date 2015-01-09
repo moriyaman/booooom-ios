@@ -18,11 +18,11 @@ class HomeViewController: UIViewController {
         //nav?.barStyle = UIBarStyle.Black
     
         let rightSearchBtn = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "barButtonItemClicked:")
-        rightSearchBtn.tintColor = UIColor(red:0.197,green:0.134,blue:0.209,alpha:1.0)
+        rightSearchBtn.tintColor = UIColor(red:0.773,green:0.525,blue:0.820,alpha:1.0)
         
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        imageView.contentMode = .ScaleAspectFit
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 20))
         let image = UIImage(named: "BoooM_logo")
+        imageView.contentMode = .ScaleAspectFit
         imageView.image = image
         navigationItem.titleView = imageView
         
