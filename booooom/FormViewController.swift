@@ -236,7 +236,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         let productNameCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow:0, inSection:1))
         let introduceCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow:1, inSection:1))
         
-        let image = imageCell?.viewWithTag(2) as UIImageView
+        let imageView = imageCell?.viewWithTag(2) as UIImageView
         let productNameField = productNameCell?.viewWithTag(14) as UITextField
         let introduceField = introduceCell?.viewWithTag(14) as UITextField
         
@@ -249,12 +249,13 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // post
         let manager = AFHTTPRequestOperationManager()
-        
         let url = "http://54.92.87.115:3000/api/v1/product/new"
+        let imageData: NSData = UIImageJPEGRepresentation(imageView.image, 0.5);
         
         var params = [
             "product_name": productNameField.text,
-            "introduction" : introduceField.text
+            "introduction" : introduceField.text,
+            "photo" : imageData
         ]
         
         manager.POST( url, parameters: params,
@@ -264,6 +265,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
             success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
                 println("Yes thies was a success")
                 SVProgressHUD.showSuccessWithStatus("Success")
+                self.dismissViewControllerAnimated(true, completion:nil)
             },
             failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
                 println("We got an error here.. \(error.localizedDescription)")
