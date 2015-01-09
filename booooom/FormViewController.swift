@@ -84,9 +84,9 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let textField = cell.viewWithTag(14) as UITextField
             if(indexPath.row == 0){
-                textField.placeholder = "DIY NAME"
+                textField.placeholder = "What's name you've created?"
             }else{
-                textField.placeholder = "INTRODUCTION"
+                textField.placeholder = "Description"
             }
             textField.delegate = self
             break
