@@ -67,7 +67,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if(cellName == "First Cell"){
             let itemImageView = cell.contentView.viewWithTag(7) as UIImageView
             
-            itemImageView.image = UIImage(named: "sample.jpg")
+            itemImageView.image = UIImage(named: "sample-chair3.jpg")
             itemImageView.clipsToBounds = true
         }
         

@@ -21,6 +21,9 @@
 		02ABDD3A1A5EBEA9009742A8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ABDD381A5EBEA9009742A8 /* LaunchScreen.xib */; };
 		02ABDD461A5EBEA9009742A8 /* booooomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABDD451A5EBEA9009742A8 /* booooomTests.swift */; };
 		02ABDD521A5EC11E009742A8 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABDD511A5EC11E009742A8 /* FormViewController.swift */; };
+		02D94E221A5FE8EB007433CA /* sample-chair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02D94E211A5FE8EB007433CA /* sample-chair.jpg */; };
+		02D94E241A5FE947007433CA /* sample-chair-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02D94E231A5FE947007433CA /* sample-chair-2.jpg */; };
+		02D94E261A5FE97D007433CA /* sample-chair3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02D94E251A5FE97D007433CA /* sample-chair3.jpg */; };
 		02F5AF5D1A5ED5E70056DF01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F5AF5C1A5ED5E70056DF01 /* LoginViewController.swift */; };
 		02F5AF5F1A5ED6240056DF01 /* HomeVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F5AF5E1A5ED6240056DF01 /* HomeVIewController.swift */; };
 		02F5AF621A5F67590056DF01 /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F5AF611A5F67590056DF01 /* Login.png */; };
@@ -59,6 +62,9 @@
 		02ABDD441A5EBEA9009742A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02ABDD451A5EBEA9009742A8 /* booooomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booooomTests.swift; sourceTree = "<group>"; };
 		02ABDD511A5EC11E009742A8 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		02D94E211A5FE8EB007433CA /* sample-chair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample-chair.jpg"; sourceTree = "<group>"; };
+		02D94E231A5FE947007433CA /* sample-chair-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample-chair-2.jpg"; sourceTree = "<group>"; };
+		02D94E251A5FE97D007433CA /* sample-chair3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample-chair3.jpg"; sourceTree = "<group>"; };
 		02F5AF5C1A5ED5E70056DF01 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		02F5AF5E1A5ED6240056DF01 /* HomeVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVIewController.swift; sourceTree = "<group>"; };
 		02F5AF601A5F62D00056DF01 /* booooom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "booooom-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -137,6 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				028D020C1A5FA61B005BFA8C /* sample-driver.jpg */,
+				02D94E211A5FE8EB007433CA /* sample-chair.jpg */,
+				02D94E251A5FE97D007433CA /* sample-chair3.jpg */,
+				02D94E231A5FE947007433CA /* sample-chair-2.jpg */,
 				028D020E1A5FA86F005BFA8C /* diy-sample.jpg */,
 				028D02081A5F9B20005BFA8C /* sample.jpg */,
 				025440EC1A5F78F700A9E382 /* BoooM_logo.png */,
@@ -275,9 +284,12 @@
 				02F5AF661A5F6EB50056DF01 /* home.png in Resources */,
 				028D02091A5F9B20005BFA8C /* sample.jpg in Resources */,
 				02ABDD3A1A5EBEA9009742A8 /* LaunchScreen.xib in Resources */,
+				02D94E261A5FE97D007433CA /* sample-chair3.jpg in Resources */,
 				02ABDD371A5EBEA9009742A8 /* Images.xcassets in Resources */,
 				025440ED1A5F78F700A9E382 /* BoooM_logo.png in Resources */,
 				028D020D1A5FA61B005BFA8C /* sample-driver.jpg in Resources */,
+				02D94E221A5FE8EB007433CA /* sample-chair.jpg in Resources */,
+				02D94E241A5FE947007433CA /* sample-chair-2.jpg in Resources */,
 				02F5AF641A5F67610056DF01 /* Start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

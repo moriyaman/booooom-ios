@@ -11,6 +11,8 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var cameraBtn: UIButton!
+    
     var scrollBeginingPoint: CGPoint!
     
     override func viewDidLoad() {
@@ -58,8 +60,36 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // only cell
         let itemImageView = cell.contentView.viewWithTag(7) as UIImageView
+        let nameLabel = cell.contentView.viewWithTag(2) as UILabel
+        let userName = cell.contentView.viewWithTag(3) as UILabel
+        
         itemImageView.image = UIImage(named: "sample.jpg")
         itemImageView.clipsToBounds = true
+        
+        switch indexPath.row {
+        case 0:
+            nameLabel.text = "Pretty Chair"
+            userName.text = "Masamitsu Konya"
+            itemImageView.image = UIImage(named: "sample-chair.jpg")
+            break
+        case 1:
+            nameLabel.text = "Dinamic Chair"
+            userName.text = "Masamitsu Konya"
+            itemImageView.image = UIImage(named: "sample-chair-2.jpg")
+            break
+        case 2:
+            nameLabel.text = "Cool Chair"
+            userName.text = "Masamitsu Konya"
+            itemImageView.image = UIImage(named: "sample-chair3.jpg")
+            break
+        case 3:
+            nameLabel.text = "Lego"
+            userName.text = "Masamitsu Konya"
+            break
+        default:
+            break
+        }
+        
         
         //userNameLabel.text = userNames[indexPath.row]
         return cell
@@ -77,6 +107,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var currentPoint = scrollView.contentOffset;
         if(scrollBeginingPoint.y < currentPoint.y){
             println("下へスクロール")
+            
+            
         }else{
             println("上へスクロール")
         }

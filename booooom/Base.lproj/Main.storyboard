@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IG2-iE-u2W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IG2-iE-u2W">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -136,6 +136,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aTu-78-1Cu"/>
                     <connections>
+                        <outlet property="cameraBtn" destination="1oS-xN-wGI" id="M39-Q4-ULu"/>
                         <outlet property="tableView" destination="yhL-RK-mtW" id="oaI-v9-y5L"/>
                         <segue destination="dst-Fi-OeR" kind="show" identifier="ItemDitail" id="hJI-q0-51m"/>
                         <segue destination="vXZ-lx-hvc" kind="presentation" identifier="toForm" id="66q-BX-n0u"/>
@@ -169,8 +170,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c5M-t9-bMJ" id="kqB-98-Gln">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kN-yj-HyQ">
-                                                    <rect key="frame" x="10" y="242" width="349" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cool Chair" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kN-yj-HyQ">
+                                                    <rect key="frame" x="10" y="239" width="349" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -184,14 +185,14 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="7" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="czK-Dj-CMi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                                                <imageView userInteractionEnabled="NO" tag="7" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sample-chair3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="czK-Dj-CMi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="227"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="czK-Dj-CMi" secondAttribute="height" multiplier="75:46" id="16C-f3-0aU"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributer" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT0-Va-Kgi">
-                                                    <rect key="frame" x="10" y="263" width="73" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masamitsu Konya" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT0-Va-Kgi">
+                                                    <rect key="frame" x="10" y="263" width="115" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="2Hq-Ql-NzG"/>
                                                     </constraints>
@@ -224,15 +225,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3vH-56-w6O" id="f0e-a1-TmE">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-driver.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LJf-YU-Rh5">
-                                                    <rect key="frame" x="10" y="10" width="80" height="79.5"/>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sample-driver.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LJf-YU-Rh5">
+                                                    <rect key="frame" x="10" y="10" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="LJf-YU-Rh5" secondAttribute="height" multiplier="66:65" id="IUg-Qp-pRM"/>
                                                         <constraint firstAttribute="width" constant="66" id="VHC-ba-sCj"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ドリル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-6g-jzj">
-                                                    <rect key="frame" x="108" y="39.5" width="183" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ドリル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-6g-jzj">
+                                                    <rect key="frame" x="108" y="40" width="183" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -473,8 +474,8 @@
         <image name="Upload_button" width="84" height="72"/>
         <image name="diy-sample.jpg" width="968" height="1296"/>
         <image name="home.png" width="750" height="1334"/>
+        <image name="sample-chair3.jpg" width="236" height="177"/>
         <image name="sample-driver.jpg" width="522" height="432"/>
-        <image name="sample.jpg" width="1600" height="1200"/>
         <image name="testImage" width="2448" height="2448"/>
     </resources>
 </document>
