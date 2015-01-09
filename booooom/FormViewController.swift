@@ -114,7 +114,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
         println("aaaaaaaa")
-        picker .dismissViewControllerAnimated(true, completion: nil)
+        picker.dismissViewControllerAnimated(true, completion: nil)
         imageView1.image=info[UIImagePickerControllerOriginalImage] as UIImage
         //sets the selected image to image view
     }

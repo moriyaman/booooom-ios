@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		025440EB1A5F77CB00A9E382 /* MyNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025440EA1A5F77CB00A9E382 /* MyNavigationViewController.swift */; };
 		025440ED1A5F78F700A9E382 /* BoooM_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 025440EC1A5F78F700A9E382 /* BoooM_logo.png */; };
+		028D02091A5F9B20005BFA8C /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 028D02081A5F9B20005BFA8C /* sample.jpg */; };
 		02ABDD2D1A5EBEA9009742A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABDD2C1A5EBEA9009742A8 /* AppDelegate.swift */; };
 		02ABDD301A5EBEA9009742A8 /* booooom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02ABDD2E1A5EBEA9009742A8 /* booooom.xcdatamodeld */; };
 		02ABDD321A5EBEA9009742A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABDD311A5EBEA9009742A8 /* ViewController.swift */; };
@@ -24,7 +25,6 @@
 		02F5AF661A5F6EB50056DF01 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F5AF651A5F6EB50056DF01 /* home.png */; };
 		7868695CA6858B434A995BD9 /* libPods-booooomTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E21BE3221726FD1333AE6E9D /* libPods-booooomTests.a */; };
 		92DB1E2FB63C44DB05648ECD /* libPods-booooom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7607886D7E1413ABF1B7924 /* libPods-booooom.a */; };
-		F30FEEBF1A5F9FB4003BAC29 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FEEBE1A5F9FB4003BAC29 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		025440EA1A5F77CB00A9E382 /* MyNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationViewController.swift; sourceTree = "<group>"; };
 		025440EC1A5F78F700A9E382 /* BoooM_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoooM_logo.png; sourceTree = "<group>"; };
+		028D02081A5F9B20005BFA8C /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		02ABDD271A5EBEA9009742A8 /* booooom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = booooom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02ABDD2B1A5EBEA9009742A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02ABDD2C1A5EBEA9009742A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		B6C80B42D06CCBF8B8845F09 /* Pods-booooomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-booooomTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-booooomTests/Pods-booooomTests.release.xcconfig"; sourceTree = "<group>"; };
 		D7607886D7E1413ABF1B7924 /* libPods-booooom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-booooom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21BE3221726FD1333AE6E9D /* libPods-booooomTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-booooomTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F30FEEBE1A5F9FB4003BAC29 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,6 @@
 				02ABDD2C1A5EBEA9009742A8 /* AppDelegate.swift */,
 				02ABDD311A5EBEA9009742A8 /* ViewController.swift */,
 				02ABDD331A5EBEA9009742A8 /* Main.storyboard */,
-				F30FEEBE1A5F9FB4003BAC29 /* DetailViewController.swift */,
 				02F5AF5C1A5ED5E70056DF01 /* LoginViewController.swift */,
 				02F5AF5E1A5ED6240056DF01 /* HomeVIewController.swift */,
 				025440EA1A5F77CB00A9E382 /* MyNavigationViewController.swift */,
@@ -130,6 +129,7 @@
 		02ABDD2A1A5EBEA9009742A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				028D02081A5F9B20005BFA8C /* sample.jpg */,
 				025440EC1A5F78F700A9E382 /* BoooM_logo.png */,
 				02F5AF651A5F6EB50056DF01 /* home.png */,
 				02F5AF631A5F67610056DF01 /* Start.png */,
@@ -263,6 +263,7 @@
 				02ABDD351A5EBEA9009742A8 /* Main.storyboard in Resources */,
 				02F5AF621A5F67590056DF01 /* Login.png in Resources */,
 				02F5AF661A5F6EB50056DF01 /* home.png in Resources */,
+				028D02091A5F9B20005BFA8C /* sample.jpg in Resources */,
 				02ABDD3A1A5EBEA9009742A8 /* LaunchScreen.xib in Resources */,
 				02ABDD371A5EBEA9009742A8 /* Images.xcassets in Resources */,
 				025440ED1A5F78F700A9E382 /* BoooM_logo.png in Resources */,
@@ -354,7 +355,6 @@
 				02ABDD521A5EC11E009742A8 /* FormViewController.swift in Sources */,
 				02F5AF5D1A5ED5E70056DF01 /* LoginViewController.swift in Sources */,
 				02ABDD2D1A5EBEA9009742A8 /* AppDelegate.swift in Sources */,
-				F30FEEBF1A5F9FB4003BAC29 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

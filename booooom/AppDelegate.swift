@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBLoginView.self
         
         //ロギング開始
-        AFNetworkActivityLogger.sharedLogger().level = .AFLoggerLevelDebug
-        AFNetworkActivityLogger.sharedLogger().startLogging()
+        //AFNetworkActivityLogger.sharedLogger().level = .AFLoggerLevelDebug
+        //AFNetworkActivityLogger.sharedLogger().startLogging()
         
         return true
     }
