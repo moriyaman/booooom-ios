@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class FormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
     
     @IBOutlet weak var imageView1: UIImageView!
     
@@ -18,6 +18,8 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
     var picker:UIImagePickerController!=UIImagePickerController()
     var popover:UIPopoverController!=nil
     let mySections: NSArray = ["", "Introduce", "Category", "", ""]
+
+    var formValues:Dictionary<String, AnyObject> = ["name": ""]
     
     @IBOutlet var tableView: UITableView!
     
@@ -79,6 +81,14 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
             cameraBtn.addTarget(self, action: "cameraBtnClicked:", forControlEvents:.TouchUpInside)
             break
         case 1:
+            
+            let textField = cell.viewWithTag(14) as UITextField
+            if(indexPath.row == 0){
+                textField.placeholder = "DIY NAME"
+            }else{
+                textField.placeholder = "INTRODUCTION"
+            }
+            textField.delegate = self
             break
         case 2:
             break
@@ -93,6 +103,17 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         //let userNameLabel = cell.viewWithTag(1) as UILabel
         //userNameLabel.text = userNames[indexPath.row]
         return cell
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) -> Bool {
+        println("aaa")
+        
+        return false
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -197,7 +218,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
             handler:{
                 (action:UIAlertAction!) -> Void in
                 println("registered")
-                // register function
+                self.postToServer(self)
         })
         
         //AlertもActionSheetも同じ
@@ -207,6 +228,46 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         presentViewController(alert, animated: true, completion: nil)
         
         
+    }
+    
+    func postToServer(sender: AnyObject){
+    
+        let imageCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow:0, inSection:0))
+        let productNameCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow:0, inSection:1))
+        let introduceCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow:1, inSection:1))
+        
+        let image = imageCell?.viewWithTag(2) as UIImageView
+        let productNameField = productNameCell?.viewWithTag(14) as UITextField
+        let introduceField = introduceCell?.viewWithTag(14) as UITextField
+        
+        println(productNameField.text)
+        println(introduceField.text)
+        
+        
+        SVProgressHUD.show()
+        SVProgressHUD.showWithStatus("Post...")
+        
+        // post
+        let manager = AFHTTPRequestOperationManager()
+        
+        let url = "http://54.92.87.115:3000/api/v1/product/new"
+        
+        var params = [
+            "product_name": productNameField.text,
+            "introduction" : introduceField.text
+        ]
+        
+        manager.POST( url, parameters: params,
+            constructingBodyWithBlock: { (data: AFMultipartFormData!) in
+                println("was file added properly to the body?")
+            },
+            success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
+                println("Yes thies was a success")
+                SVProgressHUD.showSuccessWithStatus("Success")
+            },
+            failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
+                println("We got an error here.. \(error.localizedDescription)")
+        })
     }
     
     @IBAction func closeBtnClicked(sender: AnyObject) {
