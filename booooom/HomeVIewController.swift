@@ -35,10 +35,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.setRightBarButtonItem(rightSearchBtn, animated: true)
         
     }
-
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
     
     func barButtonItemClicked(sender: AnyObject?){
         
@@ -57,28 +53,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cellName: String
-        if indexPath.row % 2 == 0 {
-            cellName = "Cell"
-        }else{
-            cellName = "Space Cell"
-        }
-        
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellName, forIndexPath: indexPath) as UITableViewCell
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ListCell", forIndexPath: indexPath) as UITableViewCell
         
         // only cell
-        if(cellName == "Cell"){
-          let itemImageView = cell.contentView.viewWithTag(4) as UIImageView
-        
-          itemImageView.image = UIImage(named: "sample.jpg")
-        }
+        let itemImageView = cell.contentView.viewWithTag(7) as UIImageView
+        itemImageView.image = UIImage(named: "sample.jpg")
         
         //userNameLabel.text = userNames[indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 4
     }
 
 }
