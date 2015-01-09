@@ -80,5 +80,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             println("上へスクロール")
         }
     }
+    
+    @IBAction func toFormController(sender: AnyObject) {
+        performSegueWithIdentifier("toForm",sender: nil)
+    }
 
 }
