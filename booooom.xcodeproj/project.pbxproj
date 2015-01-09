@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025440EB1A5F77CB00A9E382 /* MyNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025440EA1A5F77CB00A9E382 /* MyNavigationViewController.swift */; };
+		025440ED1A5F78F700A9E382 /* BoooM_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 025440EC1A5F78F700A9E382 /* BoooM_logo.png */; };
 		02ABDD2D1A5EBEA9009742A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABDD2C1A5EBEA9009742A8 /* AppDelegate.swift */; };
 		02ABDD301A5EBEA9009742A8 /* booooom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02ABDD2E1A5EBEA9009742A8 /* booooom.xcdatamodeld */; };
 		02ABDD321A5EBEA9009742A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABDD311A5EBEA9009742A8 /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025440EA1A5F77CB00A9E382 /* MyNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationViewController.swift; sourceTree = "<group>"; };
+		025440EC1A5F78F700A9E382 /* BoooM_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoooM_logo.png; sourceTree = "<group>"; };
 		02ABDD271A5EBEA9009742A8 /* booooom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = booooom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02ABDD2B1A5EBEA9009742A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02ABDD2C1A5EBEA9009742A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				02ABDD331A5EBEA9009742A8 /* Main.storyboard */,
 				02F5AF5C1A5ED5E70056DF01 /* LoginViewController.swift */,
 				02F5AF5E1A5ED6240056DF01 /* HomeVIewController.swift */,
+				025440EA1A5F77CB00A9E382 /* MyNavigationViewController.swift */,
 				02ABDD511A5EC11E009742A8 /* FormViewController.swift */,
 				02ABDD361A5EBEA9009742A8 /* Images.xcassets */,
 				02ABDD381A5EBEA9009742A8 /* LaunchScreen.xib */,
@@ -117,6 +122,7 @@
 		02ABDD2A1A5EBEA9009742A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				025440EC1A5F78F700A9E382 /* BoooM_logo.png */,
 				02F5AF651A5F6EB50056DF01 /* home.png */,
 				02F5AF631A5F67610056DF01 /* Start.png */,
 				02F5AF611A5F67590056DF01 /* Login.png */,
@@ -246,6 +252,7 @@
 				02F5AF661A5F6EB50056DF01 /* home.png in Resources */,
 				02ABDD3A1A5EBEA9009742A8 /* LaunchScreen.xib in Resources */,
 				02ABDD371A5EBEA9009742A8 /* Images.xcassets in Resources */,
+				025440ED1A5F78F700A9E382 /* BoooM_logo.png in Resources */,
 				02F5AF641A5F67610056DF01 /* Start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02ABDD321A5EBEA9009742A8 /* ViewController.swift in Sources */,
+				025440EB1A5F77CB00A9E382 /* MyNavigationViewController.swift in Sources */,
 				02F5AF5F1A5ED6240056DF01 /* HomeVIewController.swift in Sources */,
 				02ABDD301A5EBEA9009742A8 /* booooom.xcdatamodeld in Sources */,
 				02ABDD521A5EC11E009742A8 /* FormViewController.swift in Sources */,
